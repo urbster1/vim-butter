@@ -38,7 +38,7 @@ if !exists('g:butter_fixes_airline_refresh')
 endif
 
 augroup ButterPopupDefaults
-    au User ButterPopupOpen * setlocal winfixheight
+    au User ButterPopupOpen setlocal winfixheight
 augroup END
 
 if !exists('g:butter_popup_options')
