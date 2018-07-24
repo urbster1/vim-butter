@@ -1,0 +1,99 @@
+*butter.txt*  A smoother vim terminal experience.
+
+Author:  Roger Bongers
+Repo:    https://github.com/rbong/vim-butter
+License: Same terms as Vim itself (see |license|)
+
+*butter*
+
+Butter will automatically set opinionated defaults for the terminal.
+It will automatically apply fixes to certain annoying terminal problems.
+It also has some nice commands.
+
+COMMANDS                                                     *butter-commands*
+
+*:ButterPopup*
+
+Pop up or attach to a terminal at the bottom of the screen.
+
+*:ButterSplit*
+
+Pop up or vertically split a terminal at the bottom of the screen.
+
+AUTOCOMMANDS                                             *butter-autocommands*
+
+*ButterPopupOpen*
+
+Called when the butter popup is open or split.
+By default runs *:setlocal* 'winfixheight'.
+
+CONFIGURATION                                           *butter-configuration*
+
+Butter can be configured through global environment variables.
+
+*g:butter_settings*
+
+Enable or disable all settings that butter sets in terminals.
+These settings will be removed if the terminal behaviour changes.
+Defaults to 1.
+
+*g:butter_settings_norelativenumber*
+
+Set 'norelativenumber' in terminals.
+Defaults to 1.
+
+*g:butter_settings_nonumber*
+
+Set 'nonumber' in terminals.
+Defaults to 1.
+
+*g:butter_settings_nobuflisted*
+
+Set 'nobuflisted' in terminals.
+Defaults to 1.
+
+*g:butter_fixes*
+
+Enable or disable all fixes that butter currently adds to the terminal.
+These fixes will be removed when the issues are fixed.
+Defaults to 1.
+
+*g:butter_fixes_color*
+
+Set 'term' to xterm-256color.
+Some terminal programs are colored incorrectly when "*-256color" is not set.
+Vim currently only supports "xterm*".
+
+This fix can cause the cursor to suddenly change color.
+
+Defaults to 1.
+
+*g:butter_fixes_color_ale*
+
+Set *g:ale_set_highlights* to 0.
+This fixes the cursor changing color when ALE is triggered.
+It disables ALE highlighting as well.
+
+Defaults to 0, which does not enable the fix.
+
+*g:butter_fixes_redraw*
+
+Calls *:redraw* with "!" when the terminal is opened.
+This fixes windows disappearing when opening terminals.
+Defaults to 1.
+
+*g:butter_fixes_airline_refresh*
+
+Calls *:AirlineRefresh* when switching buffers.
+Sometimes airline fails to update when a terminal is open.
+Defaults to 1.
+
+*g:butter_popup_options*
+
+Options to *:term* when opening a butter popup or splitting the popup.
+Defaults to "++rows=20".
+
+*g:butter_split_options*
+
+Options to *:term* when splitting the popup.
+Defaults to "".

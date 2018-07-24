@@ -92,8 +92,8 @@ augroup ButterFixes
         if exists('##TerminalOpen') && g:butter_fixes_redraw
             au Terminalopen * redraw!
         endif
+        " sometimes airline fails to render properly when a terminal is opened
         if exists(':AirlineRefresh') && g:butter_fixes_airline_refresh
-            " sometimes airline fails to render properly when a terminal is opened
             au BufWinEnter * silent! AirlineRefresh
         endif
     endif
