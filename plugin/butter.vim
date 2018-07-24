@@ -12,6 +12,10 @@ if !exists('g:butter_settings_nonumber')
     let g:butter_settings_nonumber = 1
 endif
 
+if !exists('g:butter_settings_nobuflisted')
+    let g:butter_settings_nobuflisted = 1
+endif
+
 if !exists('g:butter_fixes')
     let g:butter_fixes = 1
 endif
@@ -30,7 +34,7 @@ if !exists('g:butter_fixes_redraw')
 endif
 
 if !exists('g:butter_fixes_airline_refresh')
-    let g:butter_fixes_airline_refresh
+    let g:butter_fixes_airline_refresh = 1
 endif
 
 augroup ButterPopupDefaults
