@@ -109,7 +109,7 @@ function! butter#popup()
     else
         exec 'bot term '.g:butter_popup_options
         doautocmd User ButterPopupOpen
-        setlocal b:is_butter_terminal = 1
+        let b:is_butter_terminal = 1
     endif
 endfunction
 " split or start a terminal on the bottom right
@@ -118,7 +118,7 @@ function! butter#split()
     if exists('b:is_butter_terminal')
         exec 'rightb vertical term '.g:butter_popup_options.' '.g:butter_split_options
         doautocmd User ButterPopupOpen
-        setlocal b:is_butter_terminal = 1
+        let b:is_butter_terminal = 1
     else
         call PopupTerm()
     endif
