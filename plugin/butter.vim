@@ -120,7 +120,7 @@ function! butter#split()
         doautocmd User ButterPopupOpen
         let b:is_butter_terminal = 1
     else
-        call PopupTerm()
+        call butter#popup()
     endif
 endfunction
 command! -nargs=0 ButterPopup :call butter#popup()
