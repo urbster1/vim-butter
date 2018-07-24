@@ -102,7 +102,7 @@ augroup END
 " Commands
 
 " start or attach to a terminal on the bottom right
-function! butter#terminal()
+function! butter#popup()
     wincmd b
     if exists('b:is_butter_terminal')
         normal! a
@@ -113,7 +113,7 @@ function! butter#terminal()
     endif
 endfunction
 " split or start a terminal on the bottom right
-function! butter#terminal_split()
+function! butter#split()
     wincmd b
     if exists('b:is_butter_terminal')
         exec 'rightb vertical term '.g:butter_popup_options.' '.g:butter_split_options
@@ -123,5 +123,5 @@ function! butter#terminal_split()
         call PopupTerm()
     endif
 endfunction
-command! -nargs=0 ButterPopup :call butter#terminal()<cr>
-command! -nargs=0 ButterSplit :call butter#terminal_split()<cr>
+command! -nargs=0 ButterPopup :call butter#popup()<cr>
+command! -nargs=0 ButterSplit :call butter#split()<cr>
