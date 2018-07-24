@@ -25,7 +25,7 @@ AUTOCOMMANDS                                             *butter-autocommands*
 *ButterPopupOpen*
 
 Called when the butter popup is open or split.
-By default runs *:setlocal* 'winfixheight'.
+By default runs |:setlocal| 'winfixheight'.
 
 CONFIGURATION                                           *butter-configuration*
 
@@ -78,22 +78,22 @@ Defaults to 0, which does not enable the fix.
 
 *g:butter_fixes_redraw*
 
-Calls *:redraw* with "!" when the terminal is opened.
+Calls |:redraw| with "!" when the terminal is opened.
 This fixes windows disappearing when opening terminals.
 Defaults to 1.
 
 *g:butter_fixes_airline_refresh*
 
-Calls *:AirlineRefresh* when switching buffers.
+Calls |:AirlineRefresh| when switching buffers.
 Sometimes airline fails to update when a terminal is open.
 Defaults to 1.
 
 *g:butter_popup_options*
 
-Options to *:term* when opening a butter popup or splitting the popup.
+Options to |:term| when opening a butter popup or splitting the popup.
 Defaults to "++rows=20".
 
 *g:butter_split_options*
 
-Options to *:term* when splitting the popup.
+Options to |:term| when splitting the popup.
 Defaults to "".
