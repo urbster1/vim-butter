@@ -123,5 +123,5 @@ function! butter#terminal_split()
         call PopupTerm()
     endif
 endfunction
-command! -nargs=0 ButterPopup call butter#terminal()<cr>
-command! -nargs=0 ButterSplit call butter#terminal_split()<cr>
+command! -nargs=0 ButterPopup :call butter#terminal()<cr>
+command! -nargs=0 ButterSplit :call butter#terminal_split()<cr>
