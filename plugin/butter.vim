@@ -42,7 +42,7 @@ augroup ButterPopupDefaults
 augroup END
 
 if !exists('g:butter_popup_options')
-    let g:butter_popup_options = ''
+    let g:butter_popup_options = '++rows=20'
 endif
 
 if !exists('g:butter_split_options')
