@@ -68,14 +68,6 @@ This fix can cause the cursor to suddenly change color.
 
 Defaults to 1.
 
-*g:butter_fixes_color_ale*
-
-Set *g:ale_set_highlights* to 0.
-This fixes the cursor changing color when ALE is triggered.
-It disables ALE highlighting as well.
-
-Defaults to 0, which does not enable the fix.
-
 *g:butter_fixes_redraw*
 
 Calls |:redraw| with "!" when the terminal is opened.

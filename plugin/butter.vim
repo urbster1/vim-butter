@@ -24,11 +24,6 @@ if !exists('g:butter_fixes_color')
     let g:butter_fixes_color = 1
 endif
 
-if !exists('g:butter_fixes_color_ale')
-    " do not enable by default since it disables an ALE feature
-    let g:butter_fixes_color_ale = 0
-endif
-
 if !exists('g:butter_fixes_redraw')
     let g:butter_fixes_redraw = 1
 endif
@@ -76,12 +71,6 @@ if g:butter_fixes && has('terminal')
     " this could also mess with your colors, ex. ale
     if g:butter_fixes_color
         set term=xterm-256color
-        " ALE colors do not play nicely with xterm-256color
-        " this disables highlight
-        " it prevents the cursor from randomly changing color
-        if g:butter_fixes_color_ale
-            let g:ale_set_highlights=0
-        endif
     endif
 endif
 
