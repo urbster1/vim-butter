@@ -20,9 +20,9 @@ if !exists('g:butter_fixes')
     let g:butter_fixes = 1
 endif
 
-if !exists('g:butter_fixes_color')
-    let g:butter_fixes_color = 1
-endif
+"if !exists('g:butter_fixes_color')
+"    let g:butter_fixes_color = 1
+"endif
 
 if !exists('g:butter_fixes_redraw')
     let g:butter_fixes_redraw = 1
